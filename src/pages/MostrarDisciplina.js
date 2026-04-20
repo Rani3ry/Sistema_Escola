@@ -121,6 +121,7 @@ function MostrarDisciplina({ role, userDados }) {
         }
 
         fetch(`${API_URL}/registros?disciplinaId=${disciplinaSelecionada.id}&matricula=${userDados.matricula}`)
+        fetch(`${API_URL}/notas?disciplinaId=${disciplinaSelecionada.id}&alunoId=${userDados.matricula}`)
             .then((res) => res.json())
             .then((data) => setRegistroAluno(data.registro || null))
             .catch((error) => console.error('Erro ao carregar notas do aluno:', error));
