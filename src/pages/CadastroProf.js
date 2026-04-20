@@ -76,7 +76,7 @@ function CadastroProf() {
         e.preventDefault();
         
         try {
-            const response = await fetch(`${API_URL}/professores}`, {
+            const response = await fetch(`${API_URL}/professores`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({

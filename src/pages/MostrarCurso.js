@@ -16,7 +16,7 @@ function MostrarCurso({ role, userDados }) {
 
     const carregarCursos = async () => {
         try {
-            const response = await fetch(`${API_URL}/cursos}`);
+            const response = await fetch(`${API_URL}/cursos`);
             const data = await response.json();
             setListaCursos(data);
         } catch (error) {

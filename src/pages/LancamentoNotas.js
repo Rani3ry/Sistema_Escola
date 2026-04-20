@@ -97,7 +97,7 @@ function LancamentoNotas({ professorLogado }) {
       if (notaData.nota03 !== '') body.nota03 = notaData.nota03;
       if (notaData.faltas !== '') body.faltas = notaData.faltas;
 
-      const response = await fetch(`${API_URL}/notas}`, {
+      const response = await fetch(`${API_URL}/notas`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(body)

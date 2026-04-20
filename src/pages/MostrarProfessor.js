@@ -23,7 +23,7 @@ function MostrarProfessor({ role, userDados }) {
   });
 
   const carregarCursos = async () => {
-    const response = await fetch(`${API_URL}/cursos}`);
+    const response = await fetch(`${API_URL}/cursos`);
     const data = await response.json();
     setCursos(data);
   };

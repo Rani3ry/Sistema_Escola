@@ -20,7 +20,7 @@ function CadastroCurso() {
         e.preventDefault();
         
         try {
-            const response = await fetch(`${API_URL}/cursos}`, {
+            const response = await fetch(`${API_URL}/cursos`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({

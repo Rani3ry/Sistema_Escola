@@ -20,7 +20,7 @@ function CadastroDisciplina() {
         e.preventDefault();
         
         try {
-            const response = await fetch(`${API_URL}/disciplinas}`, {
+            const response = await fetch(`${API_URL}/disciplinas`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
