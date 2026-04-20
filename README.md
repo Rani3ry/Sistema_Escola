@@ -61,18 +61,20 @@ O sistema possui três níveis de acesso, cada um com permissões específicas:
 
 Caso deseje executar o projeto em sua máquina para desenvolvimento ou testes:
 
-1. **Clone o repositório:**
+1. **1 Clone o repositório:**
    ```bash
    git clone [https://github.com/SEU_USUARIO/SEU_REPOSITORIO.git](https://github.com/Rani3ry/Sistema_Escola.git)
    cd SEU_REPOSITORIO
 
 2. **Configuração do Backend:**
+    ```bash
     cd server
     npm install
     # Crie um arquivo .env com suas variáveis de banco de dados
     npm start
 
 3. **Configuração do Frontend:**
+    ```bash
     cd ../client
     npm install
     # Configure o arquivo .env (REACT_APP_API_URL) apontando para o localhost:PORTA_DO_SERVER
