@@ -1,70 +1,113 @@
-# Getting Started with Create React App
+# Sistema de Gestão Estudantil 🎓
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este é um Sistema de Gestão Estudantil completo, desenvolvido para centralizar informações acadêmicas, permitindo o acompanhamento de cursos, disciplinas, notas, faltas e o status acadêmico dos alunos em tempo real.
 
-## Available Scripts
+O projeto foi construído com uma arquitetura separada entre **Frontend** (Interface do Usuário) e **Backend** (API e Regras de Negócio), garantindo escalabilidade e facilidade de manutenção.
 
-In the project directory, you can run:
 
-### `npm start`
+## 🚀 Funcionalidades
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+O sistema possui três níveis de acesso, cada um com permissões específicas:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### 👤 Administrador
+* Gestão de Cursos: Criação, leitura, atualização e exclusão de cursos.
+* Gestão de Disciplinas: Controle total sobre as disciplinas vinculadas aos cursos.
+* Gestão de Professores e Alunos: Cadastro, alteração e exclusão de professores e alunos.
+* Monitoramento geral do sistema.
 
-### `npm test`
+### 👨‍🏫 Professor
+* Consulta de informações sobre o curso, disciplina, alunos e informações próprias.
+* Lançamento de notas e controle de faltas dos alunos.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 🎓 Aluno
+* Consulta de histórico: Acesso a todas as notas e faltas das disciplinas cursadas.
+* Status Acadêmico: Verificação automática de aprovação ou recuperação (baseado no sistema de cálculo integrado).
+* Acesso às informações próprias, do curso, disciplinas e professores. 
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 🛠️ Tecnologias Utilizadas
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### 🎨 Frontend
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![CSS3](https://img.shields.io/badge/CSS3-264de4?style=for-the-badge&logo=css3&logoColor=white)
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### ⚙️ Backend
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
+![Express](https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### 🗄️ Banco de Dados
+![MySQL](https://img.shields.io/badge/MySQL-00758F?style=for-the-badge&logo=mysql&logoColor=white)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+---
 
-## Learn More
+### ☁️ Deploy
+![Railway](https://img.shields.io/badge/Railway-0B0D0E?style=for-the-badge&logo=railway&logoColor=white)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+---
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### 🔧 Ferramentas
+![Git](https://img.shields.io/badge/Git-F05033?style=for-the-badge&logo=git&logoColor=white)
+![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
+## 📦 Como rodar o projeto localmente
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Caso deseje executar o projeto em sua máquina para desenvolvimento ou testes:
 
-### Making a Progressive Web App
+1. **Clone o repositório:**
+   ```bash
+   git clone [https://github.com/SEU_USUARIO/SEU_REPOSITORIO.git](https://github.com/Rani3ry/Sistema_Escola.git)
+   cd SEU_REPOSITORIO
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+2. **Configuração do Backend:**
+    cd server
+    npm install
+    # Crie um arquivo .env com suas variáveis de banco de dados
+    npm start
 
-### Advanced Configuration
+3. **Configuração do Frontend:**
+    cd ../client
+    npm install
+    # Configure o arquivo .env (REACT_APP_API_URL) apontando para o localhost:PORTA_DO_SERVER
+    npm start
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-### Deployment
+## 🌐 Acesso ao Sistema
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+O sistema está online e pode ser acessado através do link abaixo:
+https://sistema-escola.up.railway.app/
 
-### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 🧪 Como Testar
+
+Matrículas de exemplo: 
+
+**Aluno**
+    **Matrícula:** 8350502
+    **Senha:** 12samara
+
+**Professor**
+    **Matrícula:** 535052-N
+    **Senha:** 13kaique
+
+**Admin**
+    **Matrícula:** 12345
+    **Senha:** admin123
+
+Ao acessar, você será direcionado ao Dashboard específico do seu nível de permissão (Aluno, Professor ou Admin).
+
+* Se quiser cadastrar um novo administrador, utilize a senha mestre "ESCOLA123"
+
+
+## 📝 Licença
+
+Este projeto foi desenvolvido como parte de um estudo prático de desenvolvimento web full-stack.
+
+Desenvolvido com dedicação por **Kaique Raniery**
