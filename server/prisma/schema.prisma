@@ -1,0 +1,95 @@
+// Configuração do Gerador e do Banco de Dados
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+// 1. Tabela de Cursos
+model Curso {
+  id           Int          @id // ID como INT conforme solicitado
+  nome         String
+  cargaHoraria Int
+  campus       String
+  tipo         String
+  disciplinas  Disciplina[]
+  professores  Professor[]
+  alunos       Aluno[]
+}
+
+// 2. Tabela de Disciplinas
+model Disciplina {
+  id           Int          @id // ID como INT
+  nome         String
+  cargaHoraria Int
+  aulasSemana  Int
+  
+  // Relacionamento com Curso
+  curso        Curso        @relation(fields: [cursoId], references: [id])
+  cursoId      Int
+
+  professores  Professor[]
+  notasFaltas  NotaFalta[]
+  alunos       Aluno[]      // Relação muitos-para-muitos implícita
+}
+
+// 3. Tabela de Professores
+model Professor {
+  matricula    String       @id // String (ex: 835052-N)
+  nome         String
+  email        String       @unique
+  senha        String
+  endereco      String   
+  dtNasc        DateTime 
+  telefone      String   
+  especialidade String
+  titulo       String
+
+  // Relacionamento com Curso e Disciplina
+  curso        Curso        @relation(fields: [cursoId], references: [id])
+  cursoId      Int
+  disciplina   Disciplina?  @relation(fields: [disciplinaId], references: [id])
+  disciplinaId Int?
+}
+
+// 4. Tabela de Alunos
+model Aluno {
+  matricula    Int          @id // ID/Matrícula como INT
+  nome         String
+  senha        String
+  dataNasc     DateTime
+  endereco     String
+
+  // Relacionamento com Curso
+  curso        Curso        @relation(fields: [cursoId], references: [id])
+  cursoId      Int
+
+  disciplinas  Disciplina[] // Relação muitos-para-muitos
+  notasFaltas  NotaFalta[]
+}
+
+// 5. Tabela de Notas e Faltas (Tabela de Junção/Dados)
+model NotaFalta {
+  id           Int        @id @default(autoincrement())
+  nota01       Float?     @default(0)
+  nota02       Float?     @default(0)
+  nota03       Float?     @default(0)
+  faltas       Int        @default(0)
+
+  // Relacionamentos
+  aluno        Aluno      @relation(fields: [alunoId], references: [matricula])
+  alunoId      Int
+  disciplina   Disciplina @relation(fields: [disciplinaId], references: [id])
+  disciplinaId Int
+}
+
+// 6. Tabela de Administradores
+model Admin {
+  identificacao Int       @id // ID como INT
+  nome          String
+  email         String    @unique
+  senha         String
+}

@@ -1,0 +1,72 @@
+.wide {
+    max-width: 980px;
+}
+
+.filtro-triplo {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.campo-selecao label {
+    display: block;
+    font-size: 0.82rem;
+    color: #5d6d7e;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+}
+
+.campo-selecao select {
+    width: 100%;
+}
+
+.secao-disciplinas {
+    margin-top: 30px;
+    border-top: 2px solid #f0f2f5;
+    padding-top: 20px;
+}
+
+.secao-disciplinas h4 {
+    margin-top: 0;
+    color: #2c3e50;
+}
+
+.tabela-vinculo {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.tabela-vinculo th,
+.tabela-vinculo td {
+    text-align: left;
+    padding: 12px;
+    border-bottom: 1px solid #edf2f7;
+}
+
+.tabela-vinculo th {
+    background-color: #f8f9fa;
+    color: #4a5a6a;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+}
+
+.status-resumo {
+    font-size: 1.15rem;
+    color: #1f4f7a;
+    font-weight: 700;
+}
+
+@media (max-width: 860px) {
+    .filtro-triplo {
+        grid-template-columns: 1fr;
+    }
+
+    .tabela-vinculo {
+        display: block;
+        overflow-x: auto;
+    }
+}

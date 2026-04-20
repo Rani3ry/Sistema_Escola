@@ -1,0 +1,76 @@
+.wide {
+    max-width: 900px;
+}
+
+.filtro-duplo {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.campo-selecao label {
+    display: block;
+    font-size: 0.82rem;
+    color: #5d6d7e;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+}
+
+.campo-selecao select {
+    width: 100%;
+}
+
+.status-box p {
+    font-size: 1.2rem;
+}
+
+.status-aprovado {
+    color: #1f8f4e;
+    font-weight: 700;
+}
+
+.status-aprovado-rec {
+    color: #1d5fd1;
+    font-weight: 700;
+}
+
+.status-recuperacao {
+    color: #dd7a12;
+    font-weight: 700;
+}
+
+.status-reprovado {
+    color: #d63031;
+    font-weight: 700;
+}
+
+.lista-chamada {
+    margin-top: 25px;
+    border-top: 1px solid #e8edf2;
+    padding-top: 18px;
+}
+
+.lista-chamada h4 {
+    margin-top: 0;
+    color: #2c3e50;
+}
+
+.lista-chamada ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.lista-chamada li {
+    padding: 10px 12px;
+    border-bottom: 1px solid #f1f4f7;
+    border-radius: 8px;
+    font-family: monospace;
+}
+
+@media (max-width: 700px) {
+    .filtro-duplo {
+        grid-template-columns: 1fr;
+    }
+}

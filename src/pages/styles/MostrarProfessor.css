@@ -1,0 +1,47 @@
+.wide {
+    max-width: 980px;
+}
+
+.filtro-duplo,
+.filtro-triplo {
+    display: grid;
+    gap: 16px;
+}
+
+.filtro-duplo {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.filtro-triplo {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.campo-selecao label {
+    display: block;
+    font-size: 0.82rem;
+    color: #5d6d7e;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+}
+
+.campo-selecao select {
+    width: 100%;
+}
+
+.badge-titulo {
+    background: #e1f5fe;
+    color: #0288d1;
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 999px;
+    font-weight: 700;
+    font-size: 0.92rem;
+}
+
+@media (max-width: 860px) {
+    .filtro-duplo,
+    .filtro-triplo {
+        grid-template-columns: 1fr;
+    }
+}

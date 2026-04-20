@@ -1,0 +1,211 @@
+.mostrar-container {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    width: 100%;
+    max-width: 700px;
+}
+
+.header-mostrar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #f0f2f5;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    gap: 16px;
+}
+
+.role-indicator {
+    font-size: 0.7rem;
+    background: #34495e;
+    color: white;
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.seletor-admin {
+    margin-bottom: 30px;
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.seletor-admin select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.curso-card {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border: 1px solid #e1e8ed;
+    padding: 20px;
+    border-radius: 10px;
+    background: #ffffff;
+}
+
+.curso-card.editando {
+    border-left: 5px solid #f39c12;
+    background-color: #fffdf9;
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    border-bottom: 2px solid #f0f2f5;
+    padding-bottom: 12px;
+}
+
+.input-edit-titulo {
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 8px 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: min(100%, 420px);
+}
+
+.info-row {
+    display: flex;
+    gap: 20px;
+}
+
+.info-box {
+    flex: 1;
+}
+
+.info-box label {
+    font-size: 0.8rem;
+    color: #7f8c8d;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.info-box p {
+    font-size: 1.05rem;
+    color: #2c3e50;
+    margin-top: 5px;
+    font-weight: 500;
+}
+
+.info-box.full {
+    border-top: 1px solid #f0f2f5;
+    border-bottom: 1px solid #f0f2f5;
+    padding: 15px 0;
+}
+
+.info-box input,
+.info-box select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    margin-top: 5px;
+    background: #fff;
+}
+
+.acoes-admin {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.btn-save,
+.btn-cancel,
+.btn-edit,
+.btn-delete {
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.btn-save {
+    background-color: #27ae60;
+}
+
+.btn-cancel {
+    background-color: #95a5a6;
+}
+
+.btn-edit {
+    background-color: #2980b9;
+}
+
+.btn-delete {
+    background-color: #c0392b;
+}
+
+.btn-save:hover {
+    background-color: #219150;
+}
+
+.btn-cancel:hover {
+    background-color: #7f8c8d;
+}
+
+.btn-edit:hover {
+    background-color: #216794;
+}
+
+.btn-delete:hover {
+    background-color: #992d22;
+}
+
+.destaque {
+    font-size: 1.5rem !important;
+    color: #3498db !important;
+    margin: 0;
+}
+
+.animate-in {
+    animation: fadeIn 0.4s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 760px) {
+    .mostrar-container {
+        padding: 1.3rem;
+    }
+
+    .header-mostrar,
+    .card-header,
+    .info-row {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .input-edit-titulo {
+        width: 100%;
+    }
+
+    .acoes-admin {
+        width: 100%;
+    }
+
+    .acoes-admin button {
+        flex: 1 1 160px;
+    }
+}
