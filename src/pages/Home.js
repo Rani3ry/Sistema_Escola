@@ -78,10 +78,10 @@ function Home({ role, user, onLogout }) {
                     <div className="dropdown">
                         <button className="dropbtn">Mostrar ▼</button>
                         <div className="dropdown-content">
-                            <a href="cursos" onClick={() => setView('show-curso')}>{role === 'aluno' ? 'Curso' : 'Cursos'}</a>
-                            <a href="disciplinas" onClick={() => setView('show-disciplina')}>{role === 'aluno' ? 'Disciplina' : 'Disciplinas'}</a>
-                            <a href="alunos" onClick={() => setView('show-aluno')}>{role === 'aluno' ? 'Aluno' : 'Alunos'}</a>
-                            <a href="professores" onClick={() => setView('show-prof')}>{role === 'professor' ? 'Professor' : 'Professores'}</a>
+                            <a href="cursos" onClick={(e) => { e.preventDefault(); setView('show-curso')}}>{role === 'aluno' ? 'Curso' : 'Cursos'}</a>
+                            <a href="disciplinas" onClick={(e) => { e.preventDefault(); setView('show-disciplina')}}>{role === 'aluno' ? 'Disciplina' : 'Disciplinas'}</a>
+                            <a href="alunos" onClick={(e) => { e.preventDefault(); setView('show-aluno')}}>{role === 'aluno' ? 'Aluno' : 'Alunos'}</a>
+                            <a href="professores" onClick={(e) => { e.preventDefault(); setView('show-prof')}}>{role === 'professor' ? 'Professor' : 'Professores'}</a>
                         </div>
                     </div>
 
