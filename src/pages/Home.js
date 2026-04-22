@@ -61,10 +61,10 @@ function Home({ role, user, onLogout }) {
                         <div className="dropdown">
                             <button className="dropbtn">Cadastrar ▼</button>
                             <div className="dropdown-content">
-                                <a href="cadastro-curso" onClick={() => setView('cad-curso')}>Curso</a>
-                                <a href="cadastro-disciplina" onClick={() => setView('cad-disciplina')}>Disciplina</a>
-                                <a href="cadastro-aluno" onClick={() => setView('cad-aluno')}>Aluno</a>
-                                <a href="cadastro-professor" onClick={() => setView('cad-prof')}>Professor</a>
+                                <a href="cadastro-curso" onClick={(e) => { e.preventDefault(); setView('cad-curso')}}>Curso</a>
+                                <a href="cadastro-disciplina" onClick={(e) => { e.preventDefault(); setView('cad-disciplina')}}>Disciplina</a>
+                                <a href="cadastro-aluno" onClick={(e) => { e.preventDefault(); setView('cad-aluno')}}>Aluno</a>
+                                <a href="cadastro-professor" onClick={(e) => { e.preventDefault(); setView('cad-prof')}}>Professor</a>
                             </div>
                         </div>
                     )}
