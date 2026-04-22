@@ -48,7 +48,7 @@ function CadastroAdmin({onVoltar}) {
     };
 
     return (
-        <div className="login-screen">
+        <div className="login-screen" href="cadastro-admin">
             <form className="login-container" onSubmit={handleRegister}>
                 <h2>Novo Administrador</h2>
                 <input type="text" placeholder="Nome Completo" onChange={(e) => setForm({...form, nome: e.target.value})} required />

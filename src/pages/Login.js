@@ -7,7 +7,6 @@ function Login({ role, onLogin, onVoltar }) {
   const [senha, setSenha] = useState('');
   const [verSenha, setVerSenha] = useState(false);
 
-  // Função para definir o texto do rótulo baseado no nível de acesso
   const getLabelUsuario = () => {
     switch (role) {
       case 'aluno': return 'Número de Matrícula:';
@@ -53,7 +52,7 @@ function Login({ role, onLogin, onVoltar }) {
   };
 
   return (
-    <div className="login-screen">
+    <div className="login-screen" href="login">
       <form className="login-container" onSubmit={handleSubmit}>
         <div className="login-header">
           <h2>Login</h2>

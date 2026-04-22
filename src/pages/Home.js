@@ -50,7 +50,7 @@ function Home({ role, user, onLogout }) {
     }, [role, user]);
 
     return (
-        <div className="home-container">
+        <div className="home-container" href="home">
             <nav className="navbar">
                 <div className="logo" onClick={() => setView('welcome')} style={{ cursor: 'pointer' }}>
                     Sistema Escolar
@@ -61,10 +61,10 @@ function Home({ role, user, onLogout }) {
                         <div className="dropdown">
                             <button className="dropbtn">Cadastrar ▼</button>
                             <div className="dropdown-content">
-                                <a href="#!" onClick={() => setView('cad-curso')}>Curso</a>
-                                <a href="#!" onClick={() => setView('cad-disciplina')}>Disciplina</a>
-                                <a href="#!" onClick={() => setView('cad-aluno')}>Aluno</a>
-                                <a href="#!" onClick={() => setView('cad-prof')}>Professor</a>
+                                <a href="cadastro-curso" onClick={() => setView('cad-curso')}>Curso</a>
+                                <a href="cadastro-disciplina" onClick={() => setView('cad-disciplina')}>Disciplina</a>
+                                <a href="cadastro-aluno" onClick={() => setView('cad-aluno')}>Aluno</a>
+                                <a href="cadastro-professor" onClick={() => setView('cad-prof')}>Professor</a>
                             </div>
                         </div>
                     )}
@@ -78,10 +78,10 @@ function Home({ role, user, onLogout }) {
                     <div className="dropdown">
                         <button className="dropbtn">Mostrar ▼</button>
                         <div className="dropdown-content">
-                            <a href="#!" onClick={() => setView('show-curso')}>{role === 'aluno' ? 'Curso' : 'Cursos'}</a>
-                            <a href="#!" onClick={() => setView('show-disciplina')}>{role === 'aluno' ? 'Disciplina' : 'Disciplinas'}</a>
-                            <a href="#!" onClick={() => setView('show-aluno')}>{role === 'aluno' ? 'Aluno' : 'Alunos'}</a>
-                            <a href="#!" onClick={() => setView('show-prof')}>{role === 'professor' ? 'Professor' : 'Professores'}</a>
+                            <a href="cursos" onClick={() => setView('show-curso')}>{role === 'aluno' ? 'Curso' : 'Cursos'}</a>
+                            <a href="disciplinas" onClick={() => setView('show-disciplina')}>{role === 'aluno' ? 'Disciplina' : 'Disciplinas'}</a>
+                            <a href="alunos" onClick={() => setView('show-aluno')}>{role === 'aluno' ? 'Aluno' : 'Alunos'}</a>
+                            <a href="professores" onClick={() => setView('show-prof')}>{role === 'professor' ? 'Professor' : 'Professores'}</a>
                         </div>
                     </div>
 
